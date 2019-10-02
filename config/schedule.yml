@@ -1,0 +1,3 @@
+daily _rates:
+  cron: "0 10 * * *"
+  class: "DailyRates"

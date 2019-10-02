@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.nbp.pl/api/exchangerates/rates/a/USD?format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.16.2
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - no-cache
+      pragma:
+      - no-cache
+      content-type:
+      - application/json; charset=utf-8
+      expires:
+      - "-1"
+      etag:
+      - '"8o+DfVqDAffmzFizoaEZ+vGfYuHoBETe3o1Fqf/RwBk="'
+      date:
+      - Wed, 02 Oct 2019 10:47:10 GMT
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+      set-cookie:
+      - ROUTEID=07; path=/
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ0YWJsZSI6IkEiLCJjdXJyZW5jeSI6ImRvbGFyIGFtZXJ5a2HFhHNraSIs
+        ImNvZGUiOiJVU0QiLCJyYXRlcyI6W3sibm8iOiIxOTEvQS9OQlAvMjAxOSIs
+        ImVmZmVjdGl2ZURhdGUiOiIyMDE5LTEwLTAyIiwibWlkIjo0LjAxNTJ9XX0=
+    http_version: 
+  recorded_at: Wed, 02 Oct 2019 10:47:10 GMT
+- request:
+    method: get
+    uri: http://api.nbp.pl/api/exchangerates/rates/a/USD/2019-09-27/2019-10-01?format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.16.2
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - no-cache
+      pragma:
+      - no-cache
+      content-type:
+      - application/json; charset=utf-8
+      expires:
+      - "-1"
+      etag:
+      - '"zj2ycUgphiTJ7nDmGy9gas7ngEiX/GXdOLdiVlUZI9g="'
+      date:
+      - Wed, 02 Oct 2019 10:49:52 GMT
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+      set-cookie:
+      - ROUTEID=05; path=/
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ0YWJsZSI6IkEiLCJjdXJyZW5jeSI6ImRvbGFyIGFtZXJ5a2HFhHNraSIs
+        ImNvZGUiOiJVU0QiLCJyYXRlcyI6W3sibm8iOiIxODgvQS9OQlAvMjAxOSIs
+        ImVmZmVjdGl2ZURhdGUiOiIyMDE5LTA5LTI3IiwibWlkIjo0LjAxNTR9LHsi
+        bm8iOiIxODkvQS9OQlAvMjAxOSIsImVmZmVjdGl2ZURhdGUiOiIyMDE5LTA5
+        LTMwIiwibWlkIjo0LjAwMDB9LHsibm8iOiIxOTAvQS9OQlAvMjAxOSIsImVm
+        ZmVjdGl2ZURhdGUiOiIyMDE5LTEwLTAxIiwibWlkIjo0LjAxNDd9XX0=
+    http_version: 
+  recorded_at: Wed, 02 Oct 2019 10:49:52 GMT
+recorded_with: VCR 4.0.0

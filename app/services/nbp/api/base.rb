@@ -23,6 +23,16 @@ module NBP
         URI::HTTP.build host: HOST, path: path, query: "format=#{format}"
       end
 
+      def convert_date(date)
+        val = nil
+        val = date if date.respond_to?(:strftime)
+
+        val = Date.parse(date) if date.is_a? String
+
+        raise ArgumentError, "wrong argument #{date}" unless val
+        val.strftime('%Y-%m-%d')
+      end
+
       def parse_response(body)
         return JSON.parse(body) if format == FORMAT_JSON
         body
