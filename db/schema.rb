@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_10_02_082824) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension "hstore"
   enable_extension "plpgsql"
+
+  create_table "currencies", force: :cascade do |t|
+    t.bigint "day_id"
+    t.string "iso_code"
+    t.text "name"
+    t.decimal "rate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["day_id"], name: "index_currencies_on_day_id"
+  end
+
+  create_table "days", force: :cascade do |t|
+    t.date "publish_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
