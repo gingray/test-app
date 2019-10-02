@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2019_10_02_114019) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "hstore"
   enable_extension "plpgsql"
 
   create_table "days", force: :cascade do |t|

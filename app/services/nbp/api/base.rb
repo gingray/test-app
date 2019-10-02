@@ -1,9 +1,17 @@
 module NBP
   module API
+    class BaseError < StandardError
+      def initialize(url, response)
+        super("url: #{url} code: #{response.status} body: #{response.body}")
+      end
+    end
+
     class Base
       HOST = 'api.nbp.pl'.freeze
       BASE_SEGMENT = '/api/exchangerates'.freeze
       FORMAT_JSON = :json
+      SUCCESS_CODE = 200
+      MAX_DAYS = 90
       attr_accessor :url, :format
 
       def initialize(args={})
@@ -12,6 +20,8 @@ module NBP
 
       def get(url)
         response = Faraday.get url
+        raise BaseError.new(url, response) if response.status != SUCCESS_CODE
+
         parse_response response.body
       end
 

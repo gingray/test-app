@@ -14,5 +14,47 @@
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+import $ from 'jquery'
+import 'bootstrap-datepicker/js/bootstrap-datepicker.js'
+import 'bootstrap/dist/js/bootstrap'
 
+
+$(document).ready(() =>{
+  $.ajaxSetup({
+    headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
+  });
+
+  $('#retrieve-form').submit((evt) => {
+    const data = {
+      start_date: $('input.start-date').val(),
+      end_date: $('input.end-date').val(),
+      currency: $('select.currency').val()
+    };
+    const url = $(evt.target).attr('action');
+    $.ajax(url, {
+      method: 'POST',
+      data: data,
+      success: (data) => {
+        console.log(data);
+    },
+      error: (data) => {
+        let msg = null;
+        if (data.status === 401) {
+          msg = 'Need to auth dude'
+        } else {
+          msg = data.responseJSON['msg'];
+        }
+        const html = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+   ${msg}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>`;
+
+        $('.error-msg').append($(html))
+      }
+    });
+    evt.preventDefault();
+  })
+})
 console.log('Hello World from Webpacker')

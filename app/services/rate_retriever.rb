@@ -21,6 +21,7 @@ class RateRetriever
       day = Day.find_or_create_by! publish_date: date
       rate = day.rates.where(iso_code: data['code']).first
       next if rate
+
       day.rates.build(iso_code: data['code'], name: currency_name, currency_rate: item['mid'])
       day.save!
     end
