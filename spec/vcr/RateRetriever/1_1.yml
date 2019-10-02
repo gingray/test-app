@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.nbp.pl/api/exchangerates/rates/a/USD?format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.16.2
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - no-cache
+      pragma:
+      - no-cache
+      content-type:
+      - application/json; charset=utf-8
+      expires:
+      - "-1"
+      etag:
+      - '"ppoZGRV3a3LtVXaYPynv7ZSpGdqXNNJ0UUuo3fApvEo="'
+      date:
+      - Wed, 02 Oct 2019 09:07:32 GMT
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+      set-cookie:
+      - ROUTEID=08; path=/
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ0YWJsZSI6IkEiLCJjdXJyZW5jeSI6ImRvbGFyIGFtZXJ5a2HFhHNraSIs
+        ImNvZGUiOiJVU0QiLCJyYXRlcyI6W3sibm8iOiIxOTAvQS9OQlAvMjAxOSIs
+        ImVmZmVjdGl2ZURhdGUiOiIyMDE5LTEwLTAxIiwibWlkIjo0LjAxNDd9XX0=
+    http_version: 
+  recorded_at: Wed, 02 Oct 2019 09:07:32 GMT
+recorded_with: VCR 4.0.0
