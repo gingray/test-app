@@ -37,4 +37,84 @@ http_interactions:
       string: '{"table":"A","currency":"frank szwajcarski","code":"CHF","rates":[{"no":"190/A/NBP/2019","effectiveDate":"2019-10-01","mid":4.0116}]}'
     http_version: 
   recorded_at: Tue, 01 Oct 2019 22:06:36 GMT
+- request:
+    method: get
+    uri: http://api.nbp.pl/api/exchangerates/rates/a/USD/?format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.16.2
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - no-cache
+      pragma:
+      - no-cache
+      content-type:
+      - application/json; charset=utf-8
+      expires:
+      - "-1"
+      etag:
+      - '"ppoZGRV3a3LtVXaYPynv7ZSpGdqXNNJ0UUuo3fApvEo="'
+      date:
+      - Wed, 02 Oct 2019 06:24:15 GMT
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+      set-cookie:
+      - ROUTEID=07; path=/
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ0YWJsZSI6IkEiLCJjdXJyZW5jeSI6ImRvbGFyIGFtZXJ5a2HFhHNraSIs
+        ImNvZGUiOiJVU0QiLCJyYXRlcyI6W3sibm8iOiIxOTAvQS9OQlAvMjAxOSIs
+        ImVmZmVjdGl2ZURhdGUiOiIyMDE5LTEwLTAxIiwibWlkIjo0LjAxNDd9XX0=
+    http_version: 
+  recorded_at: Wed, 02 Oct 2019 06:24:15 GMT
+- request:
+    method: get
+    uri: http://api.nbp.pl/api/exchangerates/rates/a/USD?format=json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.16.2
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - no-cache
+      pragma:
+      - no-cache
+      content-type:
+      - application/json; charset=utf-8
+      expires:
+      - "-1"
+      etag:
+      - '"ppoZGRV3a3LtVXaYPynv7ZSpGdqXNNJ0UUuo3fApvEo="'
+      date:
+      - Wed, 02 Oct 2019 06:43:07 GMT
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+      set-cookie:
+      - ROUTEID=09; path=/
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ0YWJsZSI6IkEiLCJjdXJyZW5jeSI6ImRvbGFyIGFtZXJ5a2HFhHNraSIs
+        ImNvZGUiOiJVU0QiLCJyYXRlcyI6W3sibm8iOiIxOTAvQS9OQlAvMjAxOSIs
+        ImVmZmVjdGl2ZURhdGUiOiIyMDE5LTEwLTAxIiwibWlkIjo0LjAxNDd9XX0=
+    http_version: 
+  recorded_at: Wed, 02 Oct 2019 06:43:08 GMT
 recorded_with: VCR 4.0.0
