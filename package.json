@@ -6,7 +6,7 @@
     "add": "^2.0.6",
     "bootstrap": "^4.3.1",
     "bootstrap-datepicker": "1.9",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "popper.js": "^1.15.0",
     "yarn": "^1.19.0"
   },
